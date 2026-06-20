@@ -1,3 +1,5 @@
+-- This SQL script creates a table named 'emplpyee' to store employee information.
+
 CREATE TABLE emplpyee (
 	emp_id SERIAL PRIMARY KEY,
 	fname VARCHAR(100) NOT NULL,
@@ -8,8 +10,13 @@ CREATE TABLE emplpyee (
 	hire_date DATE NOT NULL DEFAULT CURRENT_DATE
 );
 
+-- This SQL statement alters the table named "emplpyee" by renaming it to "employees".
+
 ALTER TABLE emplpyee
 RENAME TO employees;
+
+
+-- This SQL script inserts multiple records into the 'employees' table.
 
 INSERT INTO employees (emp_id, fname, lname, email, dept, salary, hire_date) 
 VALUES
@@ -23,5 +30,9 @@ VALUES
 (8, 'Rahul', 'Kumar', 'rahul.kumar@example.com', 'IT', 53000.00, '2021-02-14'),
 (9, 'Anjali', 'Mehta', 'anjali.mehta@example.com', 'Finance', 61000.00, '2018-12-03'),
 (10, 'Vijay', 'Nair', 'vijay.nair@example.com', 'Marketing', 50000.00, '2020-04-19');
+
+
+
+-- This SQL query retrieves all columns and rows from the "employees" table.
 
 select * from employees;
